@@ -383,8 +383,8 @@ open class XMSegmentedControl: UIView {
         } else if contentType == .icon {
             let tabBarSections:Int = segmentIcon.count
             let positionWidth = startingPositionAndWidth(totalWidth, distribution: itemWidthDistribution, segmentCount: tabBarSections, selectedIndex: selectedSegment)
-            addHighlightView(startingPosition: positionWidth.startingPosition, width: positionWidth.sectionWidth)
-            addSegments(startingPosition: positionWidth.startingPosition, sections: tabBarSections, width: positionWidth.sectionWidth, height: self.frame.height)
+            addHighlightView(startingPosition: 0, width: positionWidth.sectionWidth)
+            addSegments(startingPosition: 0, sections: tabBarSections, width: positionWidth.sectionWidth, height: self.frame.height)
         } else if contentType == .hybrid {
             let tabBarSections:Int = segmentContent.text.count
             let positionWidth = startingPositionAndWidth(totalWidth, distribution: itemWidthDistribution, segmentCount: tabBarSections, selectedIndex: selectedSegment)
